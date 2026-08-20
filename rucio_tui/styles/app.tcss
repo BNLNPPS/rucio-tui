@@ -1,0 +1,236 @@
+/* app.tcss — rucio-tui Textual stylesheet */
+
+/* ── Global ─────────────────────────────────────────────────────────── */
+
+Screen {
+    background: $surface;
+}
+
+/* Splash / loading */
+#splash-label {
+    text-align: center;
+    width: auto;
+    padding: 1 3;
+    border: double $accent;
+    background: $surface-darken-1;
+    margin-bottom: 1;
+}
+
+#splash-spinner {
+    width: auto;
+}
+
+/* ── Header & Footer ─────────────────────────────────────────────────── */
+
+Header {
+    background: $primary-darken-2;
+    color: $text;
+    text-style: bold;
+}
+
+Footer {
+    background: $primary-darken-3;
+    color: $text-muted;
+}
+
+/* ── Breadcrumb ──────────────────────────────────────────────────────── */
+
+Breadcrumb {
+    height: 1;
+    background: $primary-darken-2;
+    padding: 0 2;
+    margin-bottom: 1;
+}
+
+/* ── MenuScreen ──────────────────────────────────────────────────────── */
+
+MenuScreen #content {
+    height: 1fr;
+    padding: 1 2;
+    background: $surface;
+}
+
+MenuScreen #hint {
+    height: auto;
+    color: $text-muted;
+    text-align: left;
+    padding: 0 0 1 0;
+}
+
+MenuScreen #nav-buttons {
+    height: 3;
+    align: center middle;
+    background: $surface-darken-1;
+    border-top: solid $primary-darken-2;
+}
+
+MenuScreen #nav-buttons Button {
+    margin: 0 2;
+    min-width: 14;
+}
+
+/* ── CommandList ─────────────────────────────────────────────────────── */
+
+CommandList ListView {
+    background: $surface;
+}
+
+CommandList ListItem {
+    padding: 0 1;
+    height: 2;
+}
+
+CommandList ListItem.--highlight {
+    background: $primary-darken-1;
+}
+
+CommandList ListItem.--highlight .cmd-name {
+    color: $accent;
+    text-style: bold;
+}
+
+CommandList ListItem.--highlight .cmd-desc {
+    color: $text;
+}
+
+.cmd-name {
+    width: 24;
+    color: $success;
+    text-style: bold;
+    content-align: left middle;
+    height: 2;
+}
+
+.cmd-desc {
+    color: $text-muted;
+    content-align: left middle;
+    height: 2;
+    width: 1fr;
+}
+
+/* ── RunnerScreen ────────────────────────────────────────────────────── */
+
+RunnerScreen #scroll-area {
+    background: $surface;
+    height: 1fr;
+    padding: 1 2;
+}
+
+RunnerScreen #cmd-title {
+    color: $accent;
+    text-style: bold;
+    margin-bottom: 0;
+}
+
+RunnerScreen #cmd-desc {
+    color: $text-muted;
+    margin-bottom: 1;
+}
+
+RunnerScreen .section-label {
+    color: $primary-lighten-1;
+    text-style: bold;
+    margin-top: 1;
+    height: 1;
+}
+
+RunnerScreen .field-row {
+    height: auto;
+    layout: horizontal;
+    margin-bottom: 1;
+    align: left middle;
+}
+
+RunnerScreen .field-label {
+    width: 28;
+    color: $text;
+    content-align: left middle;
+    height: 3;
+}
+
+RunnerScreen .required-label {
+    color: $warning;
+}
+
+RunnerScreen Input {
+    width: 1fr;
+    height: 3;
+    border: tall $primary-darken-1;
+    background: $surface-darken-1;
+}
+
+RunnerScreen Input:focus {
+    border: tall $accent;
+}
+
+RunnerScreen Select {
+    width: 1fr;
+    height: 3;
+}
+
+RunnerScreen Checkbox {
+    width: 1fr;
+    height: 3;
+    border: tall $success;
+    background: $surface-darken-1;
+    color: $text;
+}
+
+RunnerScreen Checkbox > .toggle--button {
+    background: $warning;
+    color: $warning;
+}
+
+RunnerScreen Checkbox.-on > .toggle--button {
+    background: $warning;
+    color: $surface-darken-2;
+}
+
+RunnerScreen Checkbox:focus {
+    border: tall $accent;
+}
+
+RunnerScreen #run-row {
+    height: 3;
+    layout: horizontal;
+    margin-top: 1;
+    align: left middle;
+}
+
+RunnerScreen #btn-run {
+    min-width: 18;
+}
+
+RunnerScreen #run-status {
+    margin-left: 2;
+    color: $text-muted;
+    content-align: left middle;
+    height: 3;
+}
+
+RunnerScreen #nav-buttons {
+    height: 3;
+    align: center middle;
+    background: $surface-darken-1;
+    border-top: solid $primary-darken-2;
+}
+
+RunnerScreen #nav-buttons Button {
+    margin: 0 2;
+    min-width: 14;
+}
+
+/* ── OutputPanel ─────────────────────────────────────────────────────── */
+
+OutputPanel {
+    border: round $success;
+    height: 1fr;
+    min-height: 8;
+    background: $surface-darken-1;
+    padding: 0 1;
+    margin-top: 1;
+}
+
+OutputPanel.error {
+    border: round $error;
+}
