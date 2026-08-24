@@ -45,6 +45,19 @@ With no extra arguments, `rucio-tui` launches the interactive interface. With ar
 
 ---
 
+## Ready-made deployments
+
+Pre-built environments are available on CVMFS and at CERN — no build required:
+
+| Site | Location | Activate |
+|------|----------|----------|
+| BNL (CVMFS) | `/cvmfs/atlas.sdcc.bnl.gov/users/yesw/rucio-tui/` | `source /cvmfs/atlas.sdcc.bnl.gov/users/yesw/rucio-tui/setupMe.sh` |
+| CERN (AFS) | `~yesw/public/rucio-tui-venv/` | `source ~yesw/public/rucio-tui-venv/setupMe.sh` |
+
+After activation, run `rucio-tui` (see [Activate and run](#activate-and-run)).
+
+---
+
 ## Build the environment
 
 Run the builder **directly** — do **not** source it:
