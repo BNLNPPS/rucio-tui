@@ -37,6 +37,7 @@ With no extra arguments, `rucio-tui` launches the interactive interface. With ar
 ## Requirements
 
 - Python ≥ 3.10 — 3.11 (default), 3.12, 3.13, and 3.14 are all supported
+- Rucio ≥ 37
 - [CVMFS](https://cernvm.cern.ch/fs/) with `/cvmfs/grid.cern.ch` is recommended so VOMS config and CA certificates can be copied into the venv
 - A valid grid certificate / VOMS proxy to talk to a real Rucio instance
 

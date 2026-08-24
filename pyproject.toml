@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rucio-tui"
+version = "0.1.0"
+description = "A modern Textual-based TUI for exploring rucio commands"
+readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+authors = [
+    {name = "Shuwei Ye", email = "yesw@bnl.gov"},
+]
+requires-python = ">=3.10"
+dependencies = [
+    "textual>=8.0",
+    "rich>=13.0",
+    "click",
+    "rucio"
+]
+
+[project.scripts]
+rucio-tui = "rucio_tui.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "anyio[trio]",
+    "pytest-asyncio",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["rucio_tui", "rucio_tui.*"]
+
+[tool.setuptools.package-data]
+rucio_tui = ["styles/*.tcss"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
